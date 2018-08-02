@@ -1,0 +1,178 @@
+<!-- 	
+	Teo Espero
+	BS Cloud and Systems Administration
+	Western Governors University-
+
+	#Web-Dev-Bootcamp-Udemy
+-->
+
+<! DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="normalize.css" rel="stylesheet" type="text/css">
+			<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+			<link href="bootstrap.css" rel="stylesheet" type="text/css">
+			<link href="galery.css" rel="stylesheet" type="text/css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+			<script type="text/javascript" src="bootstrap.js"></script>
+			<meta charset="utf-8">
+			<title>teoespero.com | Javascript Programming - truth able</title>
+			<meta name="description" content="">
+  			<meta name="author" content="teoespero">
+	</head>
+	<body>
+		<div class="container">
+			<h1>The Javascript Truth Table</h1>
+			<table class="truth-table table table-hover">
+				<thead>
+					<tr>
+						<th class="text-center">Condition 1</th>
+						<th class="text-center">Condition 2</th>
+						<th class="text-center">Condition 3</th>
+						<th class="text-center">Condition</th>
+						<th class="text-center">Expression</th>
+						<th class="text-center">Results</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- AND -->
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>AND (&&)</td>
+						<td>1 && 1 && 1</td>
+						<td>
+							<p id="and1"></p>
+							<script type="text/javascript">
+								document.getElementById("and1").innerHTML = 1 && 1 && 1;
+				  			</script>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>0</td>
+						<td>AND (&&)</td>
+						<td>1 && 1 && 0</td>
+						<td>
+							<p id="and2"></p>
+							<script type="text/javascript">
+								document.getElementById("and2").innerHTML = 1 && 1 && 0;
+				  			</script>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>0</td>
+						<td>0</td>
+						<td>AND (&&)</td>
+						<td>1 && 0 && 0</td>
+						<td>
+							<p id="and3"></p>
+							<script type="text/javascript">
+								document.getElementById("and3").innerHTML = 1 && 0 && 0;
+				  			</script>
+						</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>AND (&&)</td>
+						<td>0 && 0 && 0</td>
+						<td>
+							<p id="and4"></p>
+							<script type="text/javascript">
+								document.getElementById("and4").innerHTML = 0 && 0 && 0;
+				  			</script>
+						</td>
+					</tr>	
+					<!-- OR -->				
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>OR (&&)</td>
+						<td>1 || 1 || 1</td>
+						<td>
+							<p id="and5"></p>
+							<script type="text/javascript">
+								document.getElementById("and5").innerHTML = 1 || 1 || 1;
+				  			</script>
+						</td>
+					</tr>	
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>0</td>
+						<td>OR (&&)</td>
+						<td>1 || 1 || 0</td>
+						<td>
+							<p id="and6"></p>
+							<script type="text/javascript">
+								document.getElementById("and6").innerHTML = 1 || 1 || 0;
+				  			</script>
+						</td>
+					</tr>	
+					<tr>
+						<td>1</td>
+						<td>0</td>
+						<td>0</td>
+						<td>OR (&&)</td>
+						<td>1 || 0 || 0</td>
+						<td>
+							<p id="and7"></p>
+							<script type="text/javascript">
+								document.getElementById("and7").innerHTML = 1 || 0 || 0;
+				  			</script>
+						</td>
+					</tr>	
+					<tr>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>OR (&&)</td>
+						<td>0 || 0 || 0</td>
+						<td>
+							<p id="and8"></p>
+							<script type="text/javascript">
+								document.getElementById("and8").innerHTML = 0 || 0 || 0;
+				  			</script>
+						</td>
+					</tr>	
+					<!-- NOT -->
+					<tr>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>NOT (!)</td>
+						<td>! (1)</td>
+						<td>
+							<p id="and9"></p>
+							<script type="text/javascript">
+								document.getElementById("and9").innerHTML = !(1);
+				  			</script>
+						</td>
+					</tr>	
+					<tr>
+						<td>0</td>
+						<td></td>
+						<td></td>
+						<td>NOT (!)</td>
+						<td>! (0)</td>
+						<td>
+							<p id="and10"></p>
+							<script type="text/javascript">
+								document.getElementById("and10").innerHTML = ! (0);
+				  			</script>
+						</td>
+					</tr>		
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
