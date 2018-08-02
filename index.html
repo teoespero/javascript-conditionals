@@ -26,13 +26,13 @@
   				function myFunction (theAge, theName) {
   					// body...
   					if (theAge < 18) {
-  						document.getElementById('yourRequest').value = "You cannot enter";
+  						document.getElementById('yourRequest').value = theName + " cannot enter";
   					}
   					else if (theAge < 21) {
-  						document.getElementById('yourRequest').value = "You can enter and but not drink";
+  						document.getElementById('yourRequest').value = theName + " can enter and but not drink";
   					}
   					else{
-  						document.getElementById('yourRequest').value = "You can enter and drink";	
+  						document.getElementById('yourRequest').value = theName + " can enter and drink";	
   					}
 
   				}
