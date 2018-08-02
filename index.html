@@ -22,159 +22,42 @@
 			<title>teoespero.com | Javascript Programming - Conditionals</title>
 			<meta name="description" content="">
   			<meta name="author" content="teoespero">
+  			<script type="text/javascript">
+  				function myFunction (theAge, theName) {
+  					// body...
+  					if (theAge < 18) {
+  						document.getElementById('yourRequest').value = "You cannot enter";
+  					}
+  					else if (theAge < 21) {
+  						document.getElementById('yourRequest').value = "You can enter and but not drink";
+  					}
+  					else{
+  						document.getElementById('yourRequest').value = "You can enter and drink";	
+  					}
+
+  				}
+  			</script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="jumbotron">
 				<h1>The Javascript Bouncer</h1>
 			</div>
-			<table class="truth-table table table-hover">
-				<thead>
-					<tr>
-						<th class="text-center">Condition 1</th>
-						<th class="text-center">Condition 2</th>
-						<th class="text-center">Condition 3</th>
-						<th class="text-center">Condition</th>
-						<th class="text-center">Expression</th>
-						<th class="text-center">Results</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!-- AND -->
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>AND (&&)</td>
-						<td>1 && 1 && 1</td>
-						<td>
-							<p id="and1"></p>
-							<script type="text/javascript">
-								document.getElementById("and1").innerHTML = 1 && 1 && 1;
-				  			</script>
-						</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>0</td>
-						<td>AND (&&)</td>
-						<td>1 && 1 && 0</td>
-						<td>
-							<p id="and2"></p>
-							<script type="text/javascript">
-								document.getElementById("and2").innerHTML = 1 && 1 && 0;
-				  			</script>
-						</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>0</td>
-						<td>0</td>
-						<td>AND (&&)</td>
-						<td>1 && 0 && 0</td>
-						<td>
-							<p id="and3"></p>
-							<script type="text/javascript">
-								document.getElementById("and3").innerHTML = 1 && 0 && 0;
-				  			</script>
-						</td>
-					</tr>
-					<tr>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>AND (&&)</td>
-						<td>0 && 0 && 0</td>
-						<td>
-							<p id="and4"></p>
-							<script type="text/javascript">
-								document.getElementById("and4").innerHTML = 0 && 0 && 0;
-				  			</script>
-						</td>
-					</tr>	
-					<!-- OR -->				
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>OR (&&)</td>
-						<td>1 || 1 || 1</td>
-						<td>
-							<p id="and5"></p>
-							<script type="text/javascript">
-								document.getElementById("and5").innerHTML = 1 || 1 || 1;
-				  			</script>
-						</td>
-					</tr>	
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>0</td>
-						<td>OR (&&)</td>
-						<td>1 || 1 || 0</td>
-						<td>
-							<p id="and6"></p>
-							<script type="text/javascript">
-								document.getElementById("and6").innerHTML = 1 || 1 || 0;
-				  			</script>
-						</td>
-					</tr>	
-					<tr>
-						<td>1</td>
-						<td>0</td>
-						<td>0</td>
-						<td>OR (&&)</td>
-						<td>1 || 0 || 0</td>
-						<td>
-							<p id="and7"></p>
-							<script type="text/javascript">
-								document.getElementById("and7").innerHTML = 1 || 0 || 0;
-				  			</script>
-						</td>
-					</tr>	
-					<tr>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>OR (&&)</td>
-						<td>0 || 0 || 0</td>
-						<td>
-							<p id="and8"></p>
-							<script type="text/javascript">
-								document.getElementById("and8").innerHTML = 0 || 0 || 0;
-				  			</script>
-						</td>
-					</tr>	
-					<!-- NOT -->
-					<tr>
-						<td>1</td>
-						<td></td>
-						<td></td>
-						<td>NOT (!)</td>
-						<td>! (1)</td>
-						<td>
-							<p id="and9"></p>
-							<script type="text/javascript">
-								document.getElementById("and9").innerHTML = !(1);
-				  			</script>
-						</td>
-					</tr>	
-					<tr>
-						<td>0</td>
-						<td></td>
-						<td></td>
-						<td>NOT (!)</td>
-						<td>! (0)</td>
-						<td>
-							<p id="and10"></p>
-							<script type="text/javascript">
-								document.getElementById("and10").innerHTML = ! (0);
-				  			</script>
-						</td>
-					</tr>		
-				</tbody>
-			</table>
+			<form class="form-inline">
+				<div class="form-group">
+				    <label for="yourName">Name</label>
+				    <input type="text" class="form-control" id="yourName" placeholder="John Doe" name="yourName">
+				</div>
+				<div class="form-group">
+					<label for="yourAge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age</label>
+					<input type="text" class="form-control" id="yourAge" placeholder="18" name="yourAge">
+				</div>
+				<button type="button" class="btn btn-default" onclick="myFunction(document.getElementById('yourAge').value, document.getElementById('yourName').value)">Validate</button>
+				<div class="form-group">
+					<label for="yourRequest">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result</label>
+					<input type="text" class="form-control" id="yourRequest" placeholder="Request" name="yourRequest" size="30">
+				</div>
+			</form>
 		</div>
 	</body>
 </html>
